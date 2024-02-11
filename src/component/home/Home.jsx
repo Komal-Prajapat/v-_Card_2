@@ -23,10 +23,10 @@ const Home = () => {
           />
         </div>
         <div data-aos="fade-right" data-aos-duration="800">
-          <h1 className="mt-2 font-bold text-3xl-blue-400 hover:scale-x-100 ">
+          <h1 className="mt-2 font-bold text-3xl-blue-400 ml-14 text-center hover:scale-x-100 ">
             I-SoftZone
           </h1>
-          <p className="text-sm mb-3 animate__animated hover:scale-10 ">
+          <p className="text-sm mb-3 animate__animated mt-1 ml-16 hover:scale-10 ">
             Pranay Gupta
           </p>
         </div>
@@ -35,10 +35,9 @@ const Home = () => {
       <Contact_Icon />
 
       <div data-aos="zoom-in-up" data-aos-duration="800">
-        <p className="mt-3 w-[85%] m-auto text-white pb-3">
+        <p className="mt-3 w-[85%] m-auto text-white pb-3 text-left">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro
-          soluta, dolores odio eum saepe molestias. Sunt repellat quaerat
-          sapiente facere aspernatur, enim facilis?
+          soluta, dolores odio eum saepe molestias.
         </p>
       </div>
     </div>

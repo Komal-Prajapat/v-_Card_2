@@ -17,35 +17,34 @@ import PaymentOnline from "./Payment/PaymentOnline";
 const Navbar = () => {
   return (
     <div>
-      <nav className="flex  w-full fixed bottom-0 justify-between items-center bg-gray-800 p-4">
-        
-        <ul className="flex space-x-4">
-          <li className="bg-black p-3">
+      <nav className="flex  w-full  fixed bottom-0 justify-between items-center bg-gray-800   z-10  ">
+        <ul className="flex space-x-4 m-auto">
+          <li className="p-3">
             <a href="#home" className="text-white">
               Home
             </a>
           </li>
-          <li className="bg-black p-3">
+          <li className=" p-3">
             <a href="#Contact" className="text-white">
               Contact
             </a>
           </li>
-          <li className="bg-black p-3">
+          <li className=" p-3">
             <a href="#Appointment" className="text-white">
               Appointment
             </a>
           </li>
-          <li className="bg-black p-3">
+          <li className=" p-3">
             <a href="#Gallery" className="text-white">
               Gallery
             </a>
           </li>
-          <li className="bg-black p-3">
+          <li className=" p-3">
             <a href="#Blog" className="text-white">
               Blog
             </a>
           </li>
-          <li className="bg-black p-3">
+          <li className=" p-3">
             <a href="#Enquiry" className="text-white">
               Enquiry
             </a>
@@ -86,7 +85,7 @@ const Navbar = () => {
           <PaymentOnline></PaymentOnline>
         </div>
 
-        <div className="blog bg-black" id="Enquiry">
+        <div className="blog bg-black pb-20" id="Enquiry">
           <Enquiry></Enquiry>
         </div>
       </div>
