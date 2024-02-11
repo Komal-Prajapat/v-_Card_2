@@ -14,62 +14,39 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Enquiry from "./enquiry/Enquiry";
 import PaymentOnline from "./Payment/PaymentOnline";
 
-// import './Navbar.css'; // Import your CSS file for styling
-
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(true);
-
-  useEffect(() => {
-    // Initialize smooth-scroll when the component mounts
-    const scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 1000,
-    });
-
-    // Clean up the smooth-scroll instance when the component unmounts
-    return () => {
-      scroll.destroy();
-    };
-  }, []); // Empty dependency array to run the effect only once on mount
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
-  const closeNav = () => {
-    setIsNavOpen(true);
-  };
-
   return (
     <div>
-      <nav className={`navbar ${isNavOpen ? "open" : ""} pt-[50%]`}>
-        <ul>
-          <li className=" bg-black p-3">
-            <a href="#home" onClick={closeNav}>
-              home
+      <nav className="flex  w-full fixed bottom-0 justify-between items-center bg-gray-800 p-4">
+        
+        <ul className="flex space-x-4">
+          <li className="bg-black p-3">
+            <a href="#home" className="text-white">
+              Home
             </a>
           </li>
-          <li className="bg-black mt-2">
-            <a href="#Contact" onClick={closeNav}>
+          <li className="bg-black p-3">
+            <a href="#Contact" className="text-white">
               Contact
             </a>
           </li>
-          <li className="bg-black mt-2">
-            <a href="#Appointment" onClick={closeNav}>
+          <li className="bg-black p-3">
+            <a href="#Appointment" className="text-white">
               Appointment
             </a>
           </li>
-          <li className="bg-black mt-2">
-            <a href="#Gallery" onClick={closeNav}>
+          <li className="bg-black p-3">
+            <a href="#Gallery" className="text-white">
               Gallery
             </a>
           </li>
-          <li className="bg-black mt-2">
-            <a href="#Blog" onClick={closeNav}>
+          <li className="bg-black p-3">
+            <a href="#Blog" className="text-white">
               Blog
             </a>
           </li>
-          <li className="bg-black mt-2">
-            <a href="#Enquiry" onClick={closeNav}>
+          <li className="bg-black p-3">
+            <a href="#Enquiry" className="text-white">
               Enquiry
             </a>
           </li>
@@ -77,14 +54,8 @@ const Navbar = () => {
       </nav>
 
       {/* Main content */}
-      <div className="container w-full sm:w-[40%] h-[400px] sm:m-auto shadow-2xl border-2 ">
+      <div className="container Home w-full sm:w-[40%] h-[400px] sm:m-auto shadow-2xl border-2 ">
         {/* Button to toggle navigation */}
-        <button
-          onClick={toggleNav}
-          className="nav-toggle-button navbarbutton font-bold"
-        >
-          <FontAwesomeIcon icon={isNavOpen ? faAngleRight : faAngleLeft} />
-        </button>
 
         {/* Navigation bar */}
 
@@ -102,22 +73,22 @@ const Navbar = () => {
         <div className="Service border-2 shadow-2xl " id="service">
           <Service></Service>
         </div>
-        
-        <div className="gallery"  id='Gallery'>
+
+        <div className="gallery" id="Gallery">
           <Gallery></Gallery>
         </div>
 
-        <div className="blog"  id='Enquiry'>
+        {/* 
+        <div className="blog"  id='Blog'>
+          <Blog></Blog>
+        </div> */}
+        <div className="payment border-2 shadow-2xl" id="Enquiry">
           <PaymentOnline></PaymentOnline>
         </div>
 
-        <div className="blog"  id='Blog'>
-          <Blog></Blog>
-        </div>
-
-        <div className="blog"  id='Enquiry'>
+        <div className="blog bg-black" id="Enquiry">
           <Enquiry></Enquiry>
-        </div> 
+        </div>
       </div>
     </div>
   );
